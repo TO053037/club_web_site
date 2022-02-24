@@ -54,7 +54,7 @@ export default function Index() {
 	};
 
 	return (
-		<div>
+		<div id="html">
 			<Head>
 				<title>club_web_site</title>
 			</Head>
@@ -73,6 +73,7 @@ export default function Index() {
 				</div>
 
 				<div id="activity-log" className="wrapper">
+					<p className="content-title">活動内容</p>
 					<div className="season">
 						<Activity season="spring"></Activity>
 						<ShowPicture
@@ -81,7 +82,7 @@ export default function Index() {
 							season="spring"
 						></ShowPicture>
 
-						<button onClick={() => changeSpringFlag()}>
+						<button className="switch-button" onClick={() => changeSpringFlag()}>
 							<PicSwitch flag={springFlag}></PicSwitch>
 						</button>
 					</div>
@@ -92,14 +93,14 @@ export default function Index() {
 							flag={summerFlag}
 							season="summer"
 						></ShowPicture>
-						<button onClick={() => changeSummerFlag()}>
+						<button className="switch-button" onClick={() => changeSummerFlag()}>
 							<PicSwitch flag={summerFlag}></PicSwitch>
 						</button>
 					</div>
 					<div className="season">
 						<Activity season="fall"></Activity>
 						<ShowPicture key="fall" flag={fallFlag} season="fall"></ShowPicture>
-						<button onClick={() => changeFallFlag()}>
+						<button className="switch-button" onClick={() => changeFallFlag()}>
 							<PicSwitch flag={fallFlag}></PicSwitch>
 						</button>
 					</div>
@@ -110,7 +111,7 @@ export default function Index() {
 							flag={winterFlag}
 							season="winter"
 						></ShowPicture>
-						<button onClick={() => changeWinterFlag()}>
+						<button className="switch-button" onClick={() => changeWinterFlag()}>
 							<PicSwitch flag={winterFlag}></PicSwitch>
 						</button>
 					</div>

@@ -1,3 +1,85 @@
+#html {
+	background-color: black;
+}
 h1 {
-    color: red;
+	color: white;
+	font-family: serif;
+}
+
+p {
+	color: #ffffff;
+}
+.season {
+	text-align: center;
+}
+
+.switch-button {
+	margin: 0 auto;
+	p {
+		margin: 0 auto;
+	}
+}
+
+.wrapper {
+	max-width: 700px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.content-title {
+	font-size: 2rem;
+	font-family: serif;
+}
+
+.text {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: left;
+	font-size: 1.5rem;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.season-title {
+	padding-left: 10px;
+	text-align: left;
+	font-size: 1.7rem;
+	margin-top: 10px;
+	font-family: serif;
+}
+
+ul {
+	list-style: none;
+}
+
+#header {
+	text-align: center;
+	h1 {
+		font-size: 3rem;
+	}
+}
+
+main {
+	margin-top: 80px;
+
+	#activity-log {
+		.picture {
+			text-align: center;
+			img {
+				width: 250px;
+				height: 250px;
+			}
+			ul {
+				align-items: center;
+				margin: 0 auto;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			li {
+				padding: 20px;
+			}
+		}
+	}
 }
