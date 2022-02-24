@@ -7,20 +7,19 @@ import Footer from "../components/footer";
 import Activity from "../components/activity";
 import ShowPicture from "../components/showPicture";
 import PicSwitch from "../components/picSwitch";
-import React, {useState} from 'react';
+import React, { useState } from "react";
 
 export default function Index() {
 	const [springFlag, setSpringFlag] = useState(false);
 	const [summerFlag, setSummerFlag] = useState(false);
 	const [fallFlag, setFallFlag] = useState(false);
 	const [winterFlag, setWinterFlag] = useState(false);
-	const seasonList = ['spring', 'summer', 'fall', 'winter'];
+	const seasonList = ["spring", "summer", "fall", "winter"];
 	const catchphrase = "----------------------------------------------";
 	const aboutText =
 		"ストピ同好会とは、主にピアノのまったりとした交流会を開いたり、定期的に季節ごとのイベント（例えば夏に花火、ハロウィンやクリスマスなどなど・・・）をしてみんなで楽しさをモットーに20人の部員と共に感染対策を踏まえたうえで活動しています！！！";
 	const activity_spring =
 		"スタジオ行くついでに公園で花見したり、鬼ごっこやシャボン玉で遊んだりしました！（小学生か笑）小樽観光もたのしかったです！！！お世話になっているスタジオ様にプロの演奏家のリサイタルチケットをいただき、ピアノリサイタルも見に行きましたよ♪";
-
 
 	const changeSpringFlag = () => {
 		if (springFlag == true) {
@@ -28,7 +27,7 @@ export default function Index() {
 		} else {
 			setSpringFlag(true);
 		}
-	}
+	};
 
 	const changeSummerFlag = () => {
 		if (summerFlag) {
@@ -36,7 +35,7 @@ export default function Index() {
 		} else {
 			setSummerFlag(true);
 		}
-	}
+	};
 
 	const changeFallFlag = () => {
 		if (fallFlag) {
@@ -44,7 +43,7 @@ export default function Index() {
 		} else {
 			setFallFlag(true);
 		}
-	}
+	};
 
 	const changeWinterFlag = () => {
 		if (winterFlag) {
@@ -52,10 +51,10 @@ export default function Index() {
 		} else {
 			setWinterFlag(true);
 		}
-	}
+	};
 
 	return (
-		<html>
+		<div>
 			<Head>
 				<title>club_web_site</title>
 			</Head>
@@ -76,28 +75,47 @@ export default function Index() {
 				<div id="activity-log" className="wrapper">
 					<div className="season">
 						<Activity season="spring"></Activity>
-						<ShowPicture flag={springFlag} season='spring'></ShowPicture>
-						
-						<button onClick={() => changeSpringFlag()}><PicSwitch flag={springFlag}></PicSwitch></button>
-						
+						<ShowPicture
+							key="spring"
+							flag={springFlag}
+							season="spring"
+						></ShowPicture>
+
+						<button onClick={() => changeSpringFlag()}>
+							<PicSwitch flag={springFlag}></PicSwitch>
+						</button>
 					</div>
 					<div className="season">
 						<Activity season="summer"></Activity>
-						<ShowPicture flag={summerFlag} season='summer'></ShowPicture>
-						<button onClick={() => changeSummerFlag()}><PicSwitch flag={summerFlag}></PicSwitch></button>
+						<ShowPicture
+							key="summer"
+							flag={summerFlag}
+							season="summer"
+						></ShowPicture>
+						<button onClick={() => changeSummerFlag()}>
+							<PicSwitch flag={summerFlag}></PicSwitch>
+						</button>
 					</div>
 					<div className="season">
 						<Activity season="fall"></Activity>
-						<ShowPicture flag={fallFlag} season='fall'></ShowPicture>
-						<button onClick={() => changeFallFlag()}><PicSwitch flag={fallFlag}></PicSwitch></button>
+						<ShowPicture key="fall" flag={fallFlag} season="fall"></ShowPicture>
+						<button onClick={() => changeFallFlag()}>
+							<PicSwitch flag={fallFlag}></PicSwitch>
+						</button>
 					</div>
 					<div className="season">
 						<Activity season="winter"></Activity>
-						<ShowPicture flag={winterFlag} season='winter'></ShowPicture>
-						<button onClick={() => changeWinterFlag()}><PicSwitch flag={winterFlag}></PicSwitch></button>
+						<ShowPicture
+							key="winter"
+							flag={winterFlag}
+							season="winter"
+						></ShowPicture>
+						<button onClick={() => changeWinterFlag()}>
+							<PicSwitch flag={winterFlag}></PicSwitch>
+						</button>
 					</div>
 				</div>
 			</main>
-		</html>
+		</div>
 	);
 }
